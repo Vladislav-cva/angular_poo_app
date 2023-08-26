@@ -1,0 +1,6 @@
+<app-modal></app-modal>
+<section>
+  <app-sidebar [isLogged]="this.AuthService.isLoggedIn()"></app-sidebar>
+  <app-auth-footer *ngIf="!this.AuthService.isLoggedIn()"></app-auth-footer>
+  <router-outlet></router-outlet>
+</section>

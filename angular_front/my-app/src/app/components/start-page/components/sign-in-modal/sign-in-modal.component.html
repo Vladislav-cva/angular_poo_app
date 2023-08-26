@@ -1,0 +1,33 @@
+<ng-container *cdkPortal>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <app-modal-container
+      (close)="handleCloseView()"
+      title="Log In"
+      buttonType="submit"
+    >
+      <app-input
+        placeholder="Write your email "
+        id="email"
+        type="email"
+        [formControlName]="'email'"
+        label="Email"
+      >
+        <p *ngIf="email.errors?.['required'] && email.touched">
+          The email is required!
+        </p>
+      </app-input>
+
+      <app-input
+        placeholder="Write your password"
+        id="password"
+        type="password"
+        [formControlName]="'password'"
+        label="Password"
+      >
+        <p *ngIf="password.errors?.['required'] && password.touched">
+          The password is required!
+        </p>
+      </app-input>
+    </app-modal-container>
+  </form>
+</ng-container>

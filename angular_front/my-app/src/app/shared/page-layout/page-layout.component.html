@@ -1,0 +1,20 @@
+<div class="page-layout">
+  <div class="left-page-side">
+    <div class="header">
+      <div class="header-content">
+        <ng-content select=".left-header"> </ng-content>
+      </div>
+    </div>
+    <div class="left-side-content">
+      <ng-content select=".left-content"></ng-content>
+    </div>
+  </div>
+  <div class="right-page-side">
+    <div class="header-search-bar">
+      <ng-content select=".right-header"></ng-content>
+    </div>
+    <div class="right-side-content">
+      <ng-content select=".right-content"></ng-content>
+    </div>
+  </div>
+</div>

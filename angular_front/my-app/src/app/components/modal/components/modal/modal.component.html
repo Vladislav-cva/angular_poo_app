@@ -1,0 +1,11 @@
+<div
+  id="modal"
+  class="modal-wrapper"
+  [ngClass]="{
+    hide: !portalBridge.state$.value.open
+  }"
+>
+  <div class="modal-content">
+    <ng-container *cdkPortalOutlet></ng-container>
+  </div>
+</div>

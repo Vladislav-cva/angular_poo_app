@@ -1,0 +1,30 @@
+<nav>
+  <div class="sidebar-wrapper">
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a>
+            <img [src]="'assets/images/poo_icon.svg'" alt="poo" class="icons" />
+          </a>
+        </li>
+        <li *ngFor="let sideBar of sideBar">
+          <a
+            *ngIf="sideBar.if"
+            [routerLink]="sideBar.routerLink"
+            routerLinkActive="active"
+          >
+            <img
+              [src]="sideBar.src"
+              [alt]="sideBar.alt"
+              [class]="sideBar.class"
+            />
+            <span>{{ sideBar.name }}</span>
+          </a>
+        </li>
+      </ul>
+      <div *ngIf="this.authService.isLoggedIn()">
+        <app-button name="Let's Poo" (click)="createPooTweet()"></app-button>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,28 @@
+<ng-container *cdkPortal>
+  <form [formGroup]="tweetForm" (ngSubmit)="submit()">
+    <app-modal-container
+      (close)="close()"
+      buttonType="submit"
+      title="Let's poo"
+    >
+      <app-input
+        placeholder="let's create some poo"
+        id="create-poo"
+        [formControlName]="'message'"
+        label="Poo"
+      >
+        <p
+          *ngIf="
+        this.tweetForm.controls.message.touched &&
+        this.tweetForm.controls.message.errors?.['minlength']
+      "
+        >
+          Length must be more than 6 characters!
+        </p>
+        <p *ngIf="message.errors?.['required'] && message.touched ">
+          The field is required!
+        </p>
+      </app-input>
+    </app-modal-container>
+  </form>
+</ng-container>

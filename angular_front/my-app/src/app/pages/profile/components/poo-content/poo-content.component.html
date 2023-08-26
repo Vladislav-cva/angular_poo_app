@@ -1,0 +1,25 @@
+<div class="poo-wrapper">
+  <img
+    [src]="poo?.avatar ?? 'assets/images/poo_icon.svg'"
+    alt="avatar"
+    class="icons"
+  />
+  <div class="poo-content">
+    <div class="poo-info">
+      <span>{{ poo.name ?? "mock name" | titlecase }}</span>
+      <span>{{ poo.nickName ?? "@mockName" }}</span>
+      <span>{{ poo.createdAt | date }}</span>
+    </div>
+    <div>
+      {{ poo.content }}
+    </div>
+    <div class="poop-footer">
+      <div class="likes" (click)="handleLike()">
+        <img src="assets/images/like_icon.svg" alt="likes" class="small-icon" />
+        <span>
+          {{ poo.likes }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<label [for]="id" *ngIf="label">{{ label }}</label>
+<input
+  [id]="id"
+  [type]="type"
+  [placeholder]="placeholder"
+  [value]="value"
+  (input)="onInputValueChange($event)"
+  (blur)="onTouched()"
+  [ngClass]="variant"
+/>
+<ng-content></ng-content>

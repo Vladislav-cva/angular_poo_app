@@ -1,0 +1,25 @@
+<div class="header">
+  <img [src]="'assets/images/poo_icon.svg'" alt="poo" class="icons" />
+  <h1>{{ title }}</h1>
+  <img [src]="'assets/images/poo_icon.svg'" alt="poo" class="icons" />
+</div>
+
+<div class="content">
+  <ng-content></ng-content>
+</div>
+
+<div class="buttons-wrapper">
+  <app-button
+    variant="small"
+    type="{{ buttonType }}"
+    name="{{ firstBtnName }}"
+  ></app-button>
+
+  <app-button
+    (click)="handleClose()"
+    variant="small"
+    id="close"
+    name="{{ secondBtnName }}"
+    type="button"
+  ></app-button>
+</div>

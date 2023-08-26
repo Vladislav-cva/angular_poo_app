@@ -1,0 +1,84 @@
+<app-page-layout>
+  <div class="left-header">
+    <span>{{ authService.getItem("name") }}</span>
+    <span> {{ pooService.poos?.length }} poop</span>
+  </div>
+
+  <div class="left-content">
+    <app-poo-content
+      *ngFor="let poo of pooService.poos"
+      [poo]="poo"
+    ></app-poo-content>
+  </div>
+
+  <div class="right-header">
+    <form [formGroup]="formSearch">
+      <app-input
+        [formControlName]="'search'"
+        variant="search"
+        type="text"
+        id="search"
+        placeholder="Search"
+        (ngModelChange)="onSearch()"
+      >
+      </app-input>
+    </form>
+  </div>
+
+  <div class="right-content">
+    <!-- <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1>
+    <h1>work</h1> -->
+  </div>
+</app-page-layout>

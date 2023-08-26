@@ -1,0 +1,40 @@
+:host {
+    width: 100%;
+    button {
+        background-color: rgb(29, 155, 240);
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 1px;
+        width: 100%;
+    
+        &.withWhiteBorder {
+            border: 1px solid white;
+            padding: 6px 0;
+            font-weight: 500;
+        }
+    
+        &.whiteBackground {
+            background-color: #fff;
+            padding: 6px 0;
+            color: black;
+            font-weight: 500;
+        }
+    
+        &.small {
+            padding: 7px 0px;
+            font-size: medium;
+            border-radius: 7px;
+        }
+    }
+
+    & :active {
+        background-color: #009cb4;;
+    }
+}
+
+
+
